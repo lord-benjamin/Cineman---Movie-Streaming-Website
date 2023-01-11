@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Azeret+Mono&family=Courier+Prime&family=Merriweather&family=Montserrat&family=Pacifico&family=Poppins&family=Sacramento&family=Source+Sans+Pro&family=Xanh+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="movie.css"> -->
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="images/icons8-play-16.png"
+    />
+    <title>Cineman - Movie Streaming Service</title>
+  </head>
+  <body>
+    <div id="box">
+      <div id="side">
+        <h2 id="logotxt">
+          CINEMAN <span id="head-icon"><i class="fa-solid fa-play"></i></span>
+        </h2>
+        <div class="side-divs">
+          <h4>MENU</h4>
+          <ul>
+            <li>
+              <span class="side-icons"><i class="fa-solid fa-house"></i></span
+              ><span class="sideicon-text">Home</span>
+            </li>
+            <li>
+              <span class="side-icons"
+                ><i class="fa-solid fa-people-group"></i></span
+              ><span class="sideicon-text">Community</span>
+            </li>
+            <li>
+              <span class="side-icons"><i class="fa-solid fa-compass"></i></span
+              ><span class="sideicon-text">Discover</span>
+            </li>
+            <li>
+              <span class="side-icons premium"
+                ><i class="fa-solid fa-gem"></i></span
+              ><span class="sideicon-text">Premium</span>
+            </li>
+          </ul>
+        </div>
+        <div class="side-divs" id="profile">
+          <h4>MY PROFILE</h4>
+          <ul>
+            <li>
+              <span class="side-icons"><i class="fa-solid fa-heart"></i></span
+              ><span class="sideicon-text">Favorites</span>
+            </li>
+            <li>
+              <span class="side-icons"
+                ><i class="fa-solid fa-clock-rotate-left"></i></span
+              ><span class="sideicon-text"> Recently Watched</span>
+            </li>
+            <li>
+              <span class="side-icons"><i class="fa-solid fa-pause"></i></span
+              ><span class="sideicon-text">Continue Watching</span>
+            </li>
+          </ul>
+        </div>
+        <div class="side-divs" id="genre">
+          <h4>POPULAR GENRE</h4>
+          <div class="container">
+            <span class="smallbox" id="box1">Classic</span>
+            <span class="smallbox" id="box2">Thriller</span>
+            <br />
+            <span class="smallbox" id="box3">Western</span>
+            <span class="smallbox" id="box4">Sci-Fi</span>
+          </div>
+        </div>
+        <div id="general">
+          <h4>GENERAL</h4>
+          <ul>
+            <li>Help-Center</li>
+            <li>FAQ</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="right">
+        <nav>
+          <div id="nav-headings">
+            <a class="nav-heads">TV Shows</a>
+            <a id="movie-btn" class="nav-heads">Movies</a>
+            <a id="anime-btn" class="nav-heads">Animes</a>
+            <div id="search">
+              <input
+                type="text"
+                placeholder="Search for a Movie or a TV Show"
+              />
+              <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- <span id="dark-mode"><i class="fa-solid fa-sun" id="sun"></i></span> -->
+            <button id="about-btn">About Us</button>
+          </div>
+        </nav>
+        <div id="content-main">
+          <div id="movies"></div>
+          
+          <div id="animes"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="box-movie">
+      <div id="nav-movie-section">
+        <h2 id="logotxt-movie">
+          CINEMAN
+          <span id="head-icon-movie"><i class="fa-solid fa-play"></i></span>
+        </h2>
+        <div id="nav-headings-movie">
+          <a id="home-btn" class="nav-heads-movie">Home</a>
+          <a class="nav-heads-movie">Community</a>
+          <a class="nav-heads-movie">Discover</a>
+          <a class="nav-heads-movie">Coming Soon</a>
+        </div>
+        <!-- <span id="dark-mode-movie"
+          ><i class="fa-solid fa-sun" id="sun-movie"></i
+        ></span> -->
+      </div>
+      <div id="main-area">
+        <div id="movie-des">
+          
+        </div>
+        <iframe
+          id="movie-frame"
+          width="80%"
+          height="100%"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div id="full-about">
+      <div id="about-us">
+        <h2 id="back-btn"><i class="fa-solid fa-angle-left"></i> Back</h2>
+        <h1>Our Team</h1>
+        <ul>
+          <li>
+            <div class="profile">
+              <img
+                width="200px"
+                height="200px"
+                src="images/dipanshu.jpg"
+                alt="dipanshu"
+              />
+              <h1>Dipanshu Prasad</h1>
+              <h3>Developer</h3>
+              <div class="icons">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/dipanshu-prasad-641a18231/"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a target="_blank" href="mailto:dipanshupd123@gmail.com"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+                <a target="_blank" href="https://github.com/dipanshupd1"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="profile">
+              <img
+                width="200px"
+                height="200px"
+                src="images/Dhruv Arora.png"
+                alt="dhruv"
+              />
+              <h1>Dhruv Arora</h1>
+              <h3>Developer</h3>
+              <div class="icons">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/dhruv-arora-bab128235/"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+                <a target="_blank" href="mailto:dhruvarora2612@gmail.com"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+                <a target="_blank" href="https://github.com/lord-benjamin"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div id="about-para">
+          <p>
+            Cineman is a <span>free movie streaming web service</span>. It is a
+            <span>simple and easy to use</span> website in which you can choose
+            to watch among a wide variety of popular and famous
+            <span>movies and animes</span>. We're planning to add further
+            functionalities in near future to make it production ready. For any
+            queries and suggestions you can mail us :)
+          </p>
+        </div>
+      </div>
+      <footer>
+        <div>
+          <i class="fa-regular fa-copyright"></i> Copyright 2023
+          <br />
+          Designed and Developed By Dhruv Arora and Dipanshu Prasad
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

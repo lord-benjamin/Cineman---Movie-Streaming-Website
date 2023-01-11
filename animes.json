@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "title": "Garaga",
+        "len": "1H 40M",
+        "lang": "ENG",
+        "rate": "5.1",
+        "image": "images/garaga.jpg",
+        "video": "https://www.youtube-nocookie.com/embed/kFl8P9U3xmU",
+        "desc": "With their spacecraft shipwrecked on the strange planet of Garaga, the crew of the XeBeC fight for their lives against blood-thirsty warrior apes. Political intrigue follows as the true nature of the crew's mission becomes apparent: were they meant to arrive on Garaga? And just who is this crew really taking orders from?",
+        "genre": "Animation, Action, Adventure",
+        "production": "Asmik Ace Entertainment, Aubeck"
+    },
+    {
+        "id": 2,
+        "title": "Red Planet",
+        "len": "1H 19M",
+        "lang": "ENG",
+        "rate": "6.9",
+        "image": "images/red-planet.jpg",
+        "video": "https://www.youtube-nocookie.com/embed/qMeZjmQbj-0",
+        "desc": "On the distant mining world of New Aries, a young colonist, Jim Marlowe, has acquired a native pet, a \"roundhead\" he names Willis, which can parrot speech and record visual information. As Jim and his sister P.J. are about to be sent to a boarding school, their mother Jane, the colony's chief medical officer, discovers that a substance in the deeper mines is killing the miners. She uses her authority to shut down the mines, but the decision is rescinded by the evil colony leader, a Beta Earth Mining Company man who sees only the rich profits at any cost. When the colony leader and the school's headmaster discover that Jim has a roundhead in captivity, they seek to steal it for use in medical experiments to make a serum that will temporarily protect the miners against the deadly substances in the mines. Willis records their conversation and when Jim escapes with him, it sets off a revolt against the Company that ends up involving the mysterious intelligent natives. Only Jim's friendship with Willis saves the colonists from eviction or possibly genocide at the hands of the natives, and in an epilogue set many decades later, we see that humans remained and \"terraformed\" New Aries to make it suitable for both species to co-exist.",
+        "genre": "Animation, Short, Action",
+        "production": "Warner Bros., Village Roadshow Pictures, NPV Entertainment, The Canton Company, Mars Production Pty. Ltd."
+    },
+    {
+        "id": 3,
+        "title": "Roujin Z",
+        "len": "1H 20M",
+        "lang": "ENG",
+        "rate": "6.8",
+        "image": "images/roujinz.jpg",
+        "video": "https://www.youtube-nocookie.com/embed/GehunAQyNh4",
+        "desc": "A compassionate young nurse is determined to help an elderly invalid strapped to a revolutionary health care bed but there are unexpected consequences.",
+        "genre": "Animation, Comedy, Drama",
+        "production": "A.P.P.P., Aniplex, Kadokawa Shoten Publishing Co., Movic, Sony Music Entertainment, TV Asahi, Tokyo Theatres"
+    },
+    {
+        "id": 4,
+        "title": "Highschool of the Dead",
+        "len": "4H 04M",
+        "lang": "ENG",
+        "rate": "7.2",
+        "image": "images/highschool-of-the-dead.jpg",
+        "video": "https://www.youtube-nocookie.com/embed/fetkcu7SWhE",
+        "desc": "High school students are overwhelmed with the start of the zombie apocalypse.",
+        "genre": "Animation, Action, Drama",
+        "production": "Madhouse, AT-X, Geneon Universal Entertainment, Showgate"
+    },
+    {
+        "id": 5,
+        "title": "Lensman",
+        "len": "1H 31M",
+        "lang": "ENG",
+        "rate": "6.4",
+        "image": "images/lensman.jpg",
+        "video": "https://www.youtube-nocookie.com/embed/gG3ogA5MdLc",
+        "desc": "Kimball Kinnison, a young man from the agricultural planet Mquie and his Valerian companinon, Buscirk find a dying man with a legendary crystal lens embedded in his hand. As the man was dying, he mysteriously passed on the Lens to Kim. With more companions to come by, Kim must find out the purpose of the Lens before the Boskone dynasty does.",
+        "genre": "Animation, Adventure, Sci-Fi",
+        "production": "EE Doc Smith MK Company, Kôdansha, MK Productions Ltd., Madhouse, Tatsunoko Production, Toho Company"
+    },
+    {
+        "id": 6,
+        "title": "Little Nemo: Adventures in Slumberland",
+        "len": "1H 25M",
+        "lang": "ENG",
+        "rate": "7.1",
+        "image": "images/little-nemo.jpg",
+        "video": "https://www.youtube-nocookie.com/embed/wRs4Y3Kzdt0",
+        "desc": "Each night, young Nemo goes to Slumberland and has adventures and befriends the king of Slumberland, Morpheus. But one night Nemo discovers Nightmare Land, and the evil nightmare king, throwing Slumberland and Nemo himself into danger.",
+        "genre": "Animation, Adventure, Comedy",
+        "production": "TMS Entertainment"
+    },
+    {
+        "id": 7,
+        "title": "Sea Prince And The Fire Child",
+        "len": "1H 48M",
+        "lang": "ENG",
+        "rate": "7.1",
+        "image": "images/sea-prince-and-fire-child.jpg",
+        "video": "https://www.youtube-nocookie.com/embed/HbwbhxnQWhU",
+        "desc": "A prince of the sea and a child of fire engage in a tragic forbidden romance.",
+        "genre": "Animation, Drama, Family",
+        "production": "Lippsync, Sanrio Communications, Sanrio Company"
+    },
+    {
+        "id": 8,
+        "title": "Psychic School Wars",
+        "len": "1H 47M",
+        "lang": "ENG",
+        "rate": "5.9",
+        "image": "images/psychic-school-wars.jpg",
+        "video": "https://www.youtube-nocookie.com/embed/y0y2ya6PMC8",
+        "desc": "A mysterious new transfer student who claims to be psychic, arrives and changes the lives of a group of students.",
+        "genre": "Animation, Romance, Sci-Fi",
+        "production": "Aniplex, Namco Bandai Games, Nerawareta Gakuen Production Committee, Shochiku, Sony Music Entertainment, Sunrise"
+    }
+]
