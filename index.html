@@ -31,28 +31,36 @@
     <div id="box">
       <div id="side">
         <h2 id="logotxt">
-          CINEMAN <span id="head-icon"><i class="fa-solid fa-play"></i></span>
+          CINEMAN
+          <span id="head-icon"
+            ><i class="fa-solid fa-play"></i>
+            <i id="cross-btn" class="fa-solid fa-xmark"></i
+          ></span>
         </h2>
         <div class="side-divs">
           <h4>MENU</h4>
           <ul>
             <li>
-              <span class="side-icons"><i class="fa-solid fa-house"></i></span
-              ><span class="sideicon-text">Home</span>
+              <span class="side-icons"><i class="fa-solid fa-house"></i></span>
+              <h5 class="sideicon-text">Home</h5>
             </li>
             <li>
               <span class="side-icons"
-                ><i class="fa-solid fa-people-group"></i></span
-              ><span class="sideicon-text">Community</span>
+                ><i class="fa-solid fa-people-group"></i
+              ></span>
+              <h5 class="sideicon-text">Community</h5>
             </li>
             <li>
-              <span class="side-icons"><i class="fa-solid fa-compass"></i></span
-              ><span class="sideicon-text">Discover</span>
+              <span class="side-icons"
+                ><i class="fa-solid fa-compass"></i
+              ></span>
+              <h5 class="sideicon-text">Discover</h5>
             </li>
             <li>
               <span class="side-icons premium"
-                ><i class="fa-solid fa-gem"></i></span
-              ><span class="sideicon-text">Premium</span>
+                ><i class="fa-solid fa-gem"></i
+              ></span>
+              <h5 class="sideicon-text">Premium</h5>
             </li>
           </ul>
         </div>
@@ -60,28 +68,32 @@
           <h4>MY PROFILE</h4>
           <ul>
             <li>
-              <span class="side-icons"><i class="fa-solid fa-heart"></i></span
-              ><span class="sideicon-text">Favorites</span>
+              <span class="side-icons"><i class="fa-solid fa-heart"></i></span>
+              <h5 class="sideicon-text">Favorites</h5>
             </li>
             <li>
               <span class="side-icons"
-                ><i class="fa-solid fa-clock-rotate-left"></i></span
-              ><span class="sideicon-text"> Recently Watched</span>
+                ><i class="fa-solid fa-clock-rotate-left"></i
+              ></span>
+              <h5 class="sideicon-text">Recently Watched</h5>
             </li>
             <li>
-              <span class="side-icons"><i class="fa-solid fa-pause"></i></span
-              ><span class="sideicon-text">Continue Watching</span>
+              <span class="side-icons"><i class="fa-solid fa-pause"></i></span>
+              <h5 class="sideicon-text">Continue Watching</h5>
             </li>
           </ul>
         </div>
         <div class="side-divs" id="genre">
           <h4>POPULAR GENRE</h4>
           <div class="container">
-            <span class="smallbox" id="box1">Classic</span>
-            <span class="smallbox" id="box2">Thriller</span>
-            <br />
-            <span class="smallbox" id="box3">Western</span>
-            <span class="smallbox" id="box4">Sci-Fi</span>
+            <button class="smallbox" id="box1">Classic</button>
+            <button class="smallbox" id="box2">Thriller</button>
+            <button class="smallbox" id="box3">Western</button>
+            <button class="smallbox" id="box4">Sci-Fi</button>
+            <button class="smallbox" id="box5">Drama</button>
+            <button class="smallbox" id="box6">Comedy</button>
+            <button class="smallbox" id="box7">Horror</button>
+            <button class="smallbox" id="box8">Documentary</button>
           </div>
         </div>
         <div id="general">
@@ -97,113 +109,128 @@
       <div id="right">
         <nav>
           <div id="nav-headings">
+            <span class="nav-heads menu-btn"
+              ><i class="fa-solid fa-bars"></i
+            ></span>
             <a class="nav-heads">TV Shows</a>
             <a id="movie-btn" class="nav-heads">Movies</a>
             <a id="anime-btn" class="nav-heads">Animes</a>
             <div id="search">
-              <input
-                type="text"
-                placeholder="Search for a Movie or a TV Show"
-              />
+              <input type="text" placeholder="Search" />
               <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
             </div>
             <!-- <span id="dark-mode"><i class="fa-solid fa-sun" id="sun"></i></span> -->
-            <button id="about-btn">About Us</button>
+            <a class="nav-heads" id="about-btn">About Us</a>
+          </div>
+          <div id="resp-nav-headings">
+            <span class="menu-btn"><i class="fa-solid fa-bars"></i></span>
+            <select id="resp-nav">
+              <option>TV Shows</option>
+              <option value="movie" selected>Movies</option>
+              <option value="anime">Animes</option>
+              <option>About Us</option>
+            </select>
+            <span id="resp-search-icon"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
           </div>
         </nav>
         <div id="content-main">
           <div id="movies"></div>
-          
+
           <div id="animes"></div>
         </div>
       </div>
     </div>
-    
+
     <div id="box-movie">
-      <div id="nav-movie-section">
+      <nav id="nav-movie-section">
         <h2 id="logotxt-movie">
           CINEMAN
           <span id="head-icon-movie"><i class="fa-solid fa-play"></i></span>
         </h2>
         <div id="nav-headings-movie">
-          <a id="home-btn" class="nav-heads-movie">Home</a>
+          <a class="nav-heads-movie home-btn">Home</a>
           <a class="nav-heads-movie">Community</a>
           <a class="nav-heads-movie">Discover</a>
           <a class="nav-heads-movie">Coming Soon</a>
+          <span class="menu-btn-movie"><i class="fa-solid fa-bars"></i></span>
+          <div id="nav-menu">
+            <span><i id="cross-btn-movie" class="fa-solid fa-xmark"></i></span>
+            <a class="nav-menu-item home-btn">Home</a>
+            <a class="nav-menu-item">Community</a>
+            <a class="nav-menu-item">Discover</a>
+            <a class="nav-menu-item">Coming Soon</a>
+          </div>
         </div>
         <!-- <span id="dark-mode-movie"
           ><i class="fa-solid fa-sun" id="sun-movie"></i
         ></span> -->
-      </div>
+      </nav>
       <div id="main-area">
-        <div id="movie-des">
-          
+        <div id="resp-description"></div>
+        <div id="movie-des"></div>
+        <div id="movie-frame">
+          <iframe
+            src=""
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-        <iframe
-          id="movie-frame"
-          width="80%"
-          height="100%"
-          src=""
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
       </div>
     </div>
 
     <div id="full-about">
       <div id="about-us">
         <h2 id="back-btn"><i class="fa-solid fa-angle-left"></i> Back</h2>
-        <h1>Our Team</h1>
+        <h1>Team</h1>
         <ul>
           <li>
             <div class="profile">
-              <img
-                width="200px"
-                height="200px"
-                src="images/dipanshu.jpg"
-                alt="dipanshu"
-              />
-              <h1>Dipanshu Prasad</h1>
-              <h3>Developer</h3>
-              <div class="icons">
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/dipanshu-prasad-641a18231/"
-                  ><i class="fa-brands fa-linkedin-in"></i
-                ></a>
-                <a target="_blank" href="mailto:dipanshupd123@gmail.com"
-                  ><i class="fa-solid fa-envelope"></i
-                ></a>
-                <a target="_blank" href="https://github.com/dipanshupd1"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
+              <div class="prof-img">
+                <img src="images/dipanshu.jpg" alt="dipanshu" />
+              </div>
+              <div class="prof-img-desc">
+                <h1>Dipanshu Prasad</h1>
+                <h3>Developer</h3>
+                <div class="icons">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/dipanshu-prasad-641a18231/"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a target="_blank" href="mailto:dipanshupd123@gmail.com"
+                    ><i class="fa-solid fa-envelope"></i
+                  ></a>
+                  <a target="_blank" href="https://github.com/dipanshupd1"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </li>
           <li>
             <div class="profile">
-              <img
-                width="200px"
-                height="200px"
-                src="images/Dhruv Arora.png"
-                alt="dhruv"
-              />
-              <h1>Dhruv Arora</h1>
-              <h3>Developer</h3>
-              <div class="icons">
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/dhruv-arora-bab128235/"
-                  ><i class="fa-brands fa-linkedin-in"></i
-                ></a>
-                <a target="_blank" href="mailto:dhruvarora2612@gmail.com"
-                  ><i class="fa-solid fa-envelope"></i
-                ></a>
-                <a target="_blank" href="https://github.com/lord-benjamin"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
+              <div class="prof-img">
+                <img src="images/Dhruv Arora.png" alt="dhruv" />
+              </div>
+              <div class="prof-img-desc">
+                <h1>Dhruv Arora</h1>
+                <h3>Developer</h3>
+                <div class="icons">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/dhruv-arora-legit/"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a target="_blank" href="mailto:dhruvarora2612@gmail.com"
+                    ><i class="fa-solid fa-envelope"></i
+                  ></a>
+                  <a target="_blank" href="https://github.com/lord-benjamin"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </li>
@@ -220,16 +247,10 @@
         </div>
       </div>
       <footer>
-        <div>
-          <i class="fa-regular fa-copyright"></i> Copyright 2023
-          <br />
-          Designed and Developed By Dhruv Arora and Dipanshu Prasad
-        </div>
+        <div></div>
       </footer>
     </div>
 
     <script src="script.js"></script>
   </body>
 </html>
-
-
