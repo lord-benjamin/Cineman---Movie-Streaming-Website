@@ -38,11 +38,54 @@
 //   }
 // });
 
+const aboutButton = document.getElementById("about-btn");
+const backButton = document.getElementById("back-btn");
+const menuButton = document.querySelectorAll(".menu-btn");
+const crossButton = document.getElementById("cross-btn");
+const sideBar = document.getElementById("side");
+const rightSection = document.getElementById("right");
+const menuBtnMovie = document.querySelectorAll(".menu-btn-movie");
+const crossBtnMovie = document.getElementById("cross-btn-movie");
+const respNavMenuMovie = document.getElementById("nav-menu");
 
+for (let i = 0; i < menuButton.length; ++i) {
+  menuButton[i].addEventListener("click", () => {
+    // sideBar.style.display = "block";
+    sideBar.style.transform = "translateX(0)";
+    menuButton[i].style.display = "none";
+    rightSection.style.filter = "brightness(0.2)";
+  });
+}
+for (let i = 0; i < menuButton.length; ++i) {
+  crossButton.addEventListener("click", () => {
+    // sideBar.style.display = "none";
+    sideBar.style.transform = "translateX(-100%)";
+    menuButton[i].style.display = "inline-block";
+    rightSection.style.filter = "brightness(1)";
+  });
+}
+
+for (let i = 0; i < menuBtnMovie.length; ++i) {
+  menuBtnMovie[i].addEventListener("click", () => {
+    respNavMenuMovie.style.transform = "translateY(0)";
+    // rightSection.style.filter = "brightness(0.2)";
+  });
+}
+for (let i = 0; i < menuBtnMovie.length; ++i) {
+  crossBtnMovie.addEventListener("click", () => {
+    respNavMenuMovie.style.transform = "translateY(-100%)";
+    // rightSection.style.filter = "brightness(1)";
+  });
+}
+
+const options = document.querySelectorAll(".resp-nav option");
+const selectOption = document.getElementById("resp-nav");
 
 const movieButton = document.getElementById("movie-btn");
+const movieOption = document.getElementById("movie-option");
 const movieArea = document.querySelector("#movies");
 const animeButton = document.getElementById("anime-btn");
+const animeOption = document.getElementById("anime-option");
 const animeArea = document.querySelector("#animes");
 const tabName = document.querySelector("title");
 
@@ -87,24 +130,26 @@ async function getMovie() {
     movieCard.innerHTML = inner;
     movieArea.appendChild(movieCard);
 
-    const frame = document.getElementById("movie-frame");
+    const frame = document.querySelector("#movie-frame iframe");
     const movieDes = document.getElementById("movie-des");
 
     movieCard.addEventListener("click", () => {
       fullBox.style.display = "none";
       fullBoxMovie.style.display = "block";
-      movieDes.innerHTML = `<img id="movie-img" src="${res[i].image}" alt="${res[i].title}" />
-      <br />
-      <br />
-      <br />
+      const desc = res[i].desc;
+      movieDes.innerHTML = `<img id="movie-img" src="${res[i].image}" alt="${
+        res[i].title
+      }" />
+      <div>
       <h2 id="movie-title">${res[i].title}</h2>
-      <br />
-      <p id="movie-description">${res[i].desc}</p>
-      <button>
-        <span id="read-more">Read More</span>
-      </button>
-      <br />
-      <br />
+      <p id="movie-description">${
+        desc.length > 150 ? desc.substr(0, 150) + "..." : desc
+      }</p>
+      ${
+        desc.length > 150
+          ? `<button class="read-more">Read More</button><button class="read-less">Read Less</button>`
+          : ``
+      }
       <table>
         <tr>
           <td>Genres:</td>
@@ -116,16 +161,43 @@ async function getMovie() {
         </tr>
         <tr>
           <td>Production:</td>
-          <td class="table-right" id="movie-production">${res[i].production}</td>
+          <td class="table-right" id="movie-production">${
+            res[i].production
+          }</td>
         </tr>
         <tr>
           <td>Duration:</td>
           <td class="table-right" id="movie-duration">${res[i].len}</td>
         </tr>
-      </table>`;
+      </table>
+      </div>
+      `;
+      if (window.innerWidth <= 410) {
+        document.getElementById(
+          "resp-description"
+        ).innerHTML = `<p id="movie-description">${
+          desc.length > 150 ? desc.substr(0, 150) + "..." : desc
+        }</p>
+        ${
+          desc.length > 150
+            ? `<button class="read-more">Read More</button><button class="read-less">Read Less</button>`
+            : ``
+        }`;
+      }
       tabName.innerHTML = `${res[i].title}`;
       frame.setAttribute("src", `${res[i].video}`);
       scroll.style.setProperty("--scroll-color", "rgba(72, 72, 72,0.8)");
+      document.querySelector(".read-more").addEventListener("click", () => {
+        document.querySelector("#movie-description").innerHTML = desc;
+        document.querySelector(".read-more").style.display = "none";
+        document.querySelector(".read-less").style.display = "inline-block";
+      });
+      document.querySelector(".read-less").addEventListener("click", () => {
+        document.querySelector("#movie-description").innerHTML =
+          desc.substr(0, 150) + "...";
+        document.querySelector(".read-more").style.display = "inline-block";
+        document.querySelector(".read-less").style.display = "none";
+      });
     });
   }
 
@@ -146,23 +218,21 @@ async function getMovie() {
     });
   }
 
-  const aboutButton = document.getElementById("about-btn");
-  const backButton = document.getElementById("back-btn");
-
-  aboutButton.addEventListener("click",()=>{
+  aboutButton.addEventListener("click", () => {
     tabName.innerHTML = "About Us";
     fullBox.style.display = "none";
     fullAbout.style.display = "block";
-    scroll.style.setProperty("--scroll-color","rgba(72, 72, 72,0.8)");
-    scroll.style.setProperty("--scroll-color-hover","#2154ff80");
-  })
-  backButton.addEventListener("click",()=>{
+    scroll.style.setProperty("--scroll-color", "rgba(72, 72, 72,0.8)");
+    scroll.style.setProperty("--scroll-color-hover", "#2154ff80");
+  });
+  backButton.addEventListener("click", () => {
     tabName.innerHTML = "Movies: Cineman - Movie Streaming Service";
     fullBox.style.display = "flex";
     fullAbout.style.display = "none";
-    scroll.style.setProperty("--scroll-color","#2154ff");
-    scroll.style.setProperty("--scroll-color-hover","#2154ff");
-  })
+    scroll.style.setProperty("--scroll-color", "#2154ff");
+    scroll.style.setProperty("--scroll-color-hover", "#2154ff");
+    selectOption.selectedIndex = "1";
+  });
 
   const logo = document.getElementById("logotxt-movie");
   logo.addEventListener("click", () => {
@@ -172,13 +242,16 @@ async function getMovie() {
     scroll.style.setProperty("--scroll-color", "#2154ff");
   });
 
-  const homeButton = document.getElementById("home-btn");
-  homeButton.addEventListener("click", () => {
-    fullBox.style.display = "flex";
-    fullBoxMovie.style.display = "none";
-    tabName.innerHTML = "Movies: Cineman - Movie Streaming Service";
-    scroll.style.setProperty("--scroll-color", "#2154ff");
-  });
+  const homeButton = document.querySelectorAll(".home-btn");
+  for (let i = 0; i < homeButton.length; ++i) {
+    homeButton[i].addEventListener("click", () => {
+      fullBox.style.display = "flex";
+      fullBoxMovie.style.display = "none";
+      tabName.innerHTML = "Movies: Cineman - Movie Streaming Service";
+      respNavMenuMovie.style.transform = "translateY(-100%)";
+      scroll.style.setProperty("--scroll-color", "#2154ff");
+    });
+  }
 }
 getMovie();
 movieButton.addEventListener("click", getMovie);
@@ -213,47 +286,80 @@ async function getAnime() {
                     <h3 class="des1">${res[i].len}</h3>
                     <h3 class="des2">${res[i].lang}</h3>
                     <h3 class="des3">${res[i].rate}</h3>
-                  </div>
+                    </div>
                 </div>
               </div>`;
     animeCard.innerHTML = inner;
     animeArea.appendChild(animeCard);
 
-    const frame = document.getElementById("movie-frame");
+    const frame = document.querySelector("#movie-frame iframe");
     const movieDes = document.getElementById("movie-des");
 
     animeCard.addEventListener("click", () => {
       fullBox.style.display = "none";
       fullBoxMovie.style.display = "block";
-      movieDes.innerHTML = `<img id="movie-img" src="${res[i].image}" alt="${res[i].title}" />
-      <br />
-      <br />
-      <br />
+      const desc = res[i].desc;
+      movieDes.innerHTML = `<img id="movie-img" src="${res[i].image}" alt="${
+        res[i].title
+      }" />
+      <div>
       <h2 id="movie-title">${res[i].title}</h2>
-      <br />
-      <p id="movie-description">${res[i].desc}</p>
-      <button>
-        <span id="read-more">Read More</span>
-      </button>
-      <br />
-      <br />
+      <p id="movie-description">${
+        desc.length > 150 ? desc.substr(0, 150) + "..." : desc
+      }</p>
+      ${
+        desc.length > 150
+          ? `<button class="read-more">Read More</button><button class="read-less">Read Less</button>`
+          : ``
+      }
       <table>
         <tr>
           <td>Genres:</td>
           <td class="table-right" id="movie-genre">${res[i].genre}</td>
         </tr>
         <tr>
+          <td>Cast:</td>
+          <td class="table-right" id="movie-cast">${res[i].cast}</td>
+        </tr>
+        <tr>
           <td>Production:</td>
-          <td class="table-right" id="movie-production">${res[i].production}</td>
+          <td class="table-right" id="movie-production">${
+            res[i].production
+          }</td>
         </tr>
         <tr>
           <td>Duration:</td>
           <td class="table-right" id="movie-duration">${res[i].len}</td>
         </tr>
-      </table>`;
+      </table>
+      </div>
+      `;
+      if (window.innerWidth <= 410) {
+        document.getElementById(
+          "resp-description"
+        ).innerHTML = `<p id="movie-description">${
+          desc.length > 150 ? desc.substr(0, 150) + "..." : desc
+        }</p>
+        ${
+          desc.length > 150
+            ? `<button class="read-more">Read More</button><button class="read-less">Read Less</button>`
+            : ``
+        }`;
+      }
       tabName.innerHTML = `${res[i].title}`;
       frame.setAttribute("src", `${res[i].video}`);
       scroll.style.setProperty("--scroll-color", "rgba(72, 72, 72,0.8)");
+      document.querySelector(".read-more").addEventListener("click", () => {
+        document.querySelector("#movie-description").innerHTML = desc;
+        document.querySelector(".read-more").style.display = "none";
+        document.querySelector(".read-less").style.display = "inline-block";
+      });
+      document.querySelector(".read-less").addEventListener("click", () => {
+        document.querySelector("#movie-description").innerHTML =
+          desc.substr(0, 150) + "...";
+        document.querySelector(".read-more").style.display = "inline-block";
+        document.querySelector(".read-less").style.display = "none";
+      });
     });
   }
 
@@ -274,23 +380,21 @@ async function getAnime() {
     });
   }
 
-  const aboutButton = document.getElementById("about-btn");
-  const backButton = document.getElementById("back-btn");
-
-  aboutButton.addEventListener("click",()=>{
+  aboutButton.addEventListener("click", () => {
     tabName.innerHTML = "About Us";
     fullBox.style.display = "none";
     fullAbout.style.display = "block";
     scroll.style.setProperty("--scroll-color", "rgba(72, 72, 72,0.8)");
-    scroll.style.setProperty("--scroll-color-hover","#2154ff80");
-  })
-  backButton.addEventListener("click",()=>{
+    scroll.style.setProperty("--scroll-color-hover", "#2154ff80");
+  });
+  backButton.addEventListener("click", () => {
     tabName.innerHTML = "Animes: Cineman - Movie Streaming Service";
     fullBox.style.display = "flex";
     fullAbout.style.display = "none";
     scroll.style.setProperty("--scroll-color", "#2154ff");
-    scroll.style.setProperty("--scroll-color-hover","#2154ff");
-  })
+    scroll.style.setProperty("--scroll-color-hover", "#2154ff");
+    selectOption.selectedIndex = "2";
+  });
 
   const logo = document.getElementById("logotxt-movie");
   logo.addEventListener("click", () => {
@@ -300,13 +404,44 @@ async function getAnime() {
     scroll.style.setProperty("--scroll-color", "#2154ff");
   });
 
-  const homeButton = document.getElementById("home-btn");
-  homeButton.addEventListener("click", () => {
-    fullBox.style.display = "flex";
-    fullBoxMovie.style.display = "none";
-    tabName.innerHTML = "Animes: Cineman - Movie Streaming Service";
-    scroll.style.setProperty("--scroll-color", "#2154ff");
-  });
+  const homeButton = document.querySelectorAll(".home-btn");
+  for (let i = 0; i < homeButton.length; ++i) {
+    homeButton[i].addEventListener("click", () => {
+      fullBox.style.display = "flex";
+      fullBoxMovie.style.display = "none";
+      tabName.innerHTML = "Animes: Cineman - Movie Streaming Service";
+      respNavMenuMovie.style.transform = "translateY(-100%)";
+      scroll.style.setProperty("--scroll-color", "#2154ff");
+    });
+  }
 }
 // getAnime();
 animeButton.addEventListener("click", getAnime);
+
+const showAbout = () => {
+  fullBox.style.display = "none";
+  fullAbout.style.display = "block";
+  tabName.innerHTML = "About Us";
+};
+const getOption = () => {
+  document.addEventListener("input", (event) => {
+    if (event.target.id !== "resp-nav") {
+      return;
+    }
+    if (event.target.selectedIndex == "2") {
+      return getAnime();
+    } else if (event.target.selectedIndex == "3") {
+      return showAbout();
+    } else {
+      return getMovie();
+    }
+  });
+};
+getOption();
+
+const footer = document.querySelector("footer div");
+const d = new Date();
+const currentYear = d.getFullYear();
+footer.innerHTML = `<i class="fa-regular fa-copyright"></i> Copyright ${currentYear}
+<br />
+Designed and Developed By Dhruv Arora and Dipanshu Prasad`;
