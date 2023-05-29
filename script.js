@@ -318,10 +318,6 @@ async function getAnime() {
           <td class="table-right" id="movie-genre">${res[i].genre}</td>
         </tr>
         <tr>
-          <td>Cast:</td>
-          <td class="table-right" id="movie-cast">${res[i].cast}</td>
-        </tr>
-        <tr>
           <td>Production:</td>
           <td class="table-right" id="movie-production">${
             res[i].production
