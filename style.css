@@ -726,8 +726,8 @@ h4 {
 .icons a {
   color: #2154ff;
 }
-.icons a i:hover {
-  margin: 15px 20px;
+.icons a:hover {
+/*   margin: 15px 20px; */
   color: white;
 }
 #about-para {
