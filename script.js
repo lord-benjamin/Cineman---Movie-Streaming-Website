@@ -67,7 +67,7 @@ for (let i = 0; i < menuButton.length; ++i) {
 
 for (let i = 0; i < menuBtnMovie.length; ++i) {
   menuBtnMovie[i].addEventListener("click", () => {
-    respNavMenuMovie.style.transform = "translateY(0)";
+    respNavMenuMovie.style.transform = "translateY(5px)";
     // rightSection.style.filter = "brightness(0.2)";
   });
 }
